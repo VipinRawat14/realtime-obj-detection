@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Object Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Live Object Detection</h1>
+
+    <div class="video-container">
+        <video id="camera" autoplay muted playsinline></video>
+        <canvas id="overlay"></canvas>
+    </div>
+
+    <h2 id="objects">Detecting...</h2>
+
+    <div class="button-container">
+        <button onclick="toggleCamera()">Switch Camera</button>
+        <button onclick="toggleSpeech()" id="talkBtn">Enable Talk</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
